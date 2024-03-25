@@ -52,10 +52,13 @@ while True:
             
 
     elif opcao == "e":
-        extrato_array = extrato.split()
-        print("\n================ EXTRATO ================")
-        print(extrato)
-        print(f"Vosso saldo atual de vossa senhoria é de R${saldo}")
+        if(saldo <= 0):
+            print("Vossa senhoria não tem saldo!")
+        else:
+            extrato_array = extrato.split()
+            print("\n================ EXTRATO ================")
+            print(extrato)
+            print(f"Vosso saldo atual de vossa senhoria é de R${saldo}")
     elif opcao == "q":
         break
 
